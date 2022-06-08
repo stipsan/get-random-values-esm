@@ -1,1 +1,3 @@
-export default window.crypto.getRandomValues
+export default function getRandomValues(typedArray) {
+  return window.crypto.getRandomValues(typedArray)
+}
