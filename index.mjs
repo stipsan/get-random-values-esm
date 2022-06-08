@@ -1,3 +1,5 @@
-import getRandomValues from './index.js'
+// Strict ESM env, designed to run outside Node.js in envs that provide WebCrypto (deno, browsers, etc)
 
-export default getRandomValues
+export default function getRandomValues(typedArray) {
+  return window.crypto.getRandomValues(typedArray)
+}
